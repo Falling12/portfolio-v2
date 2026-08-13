@@ -16,7 +16,7 @@ export function About({ uiText, about }: { uiText: UiText; about: AboutContent }
               className="aspect-[3/4] w-full max-w-md border border-rule object-cover shadow-2xl grayscale contrast-125"
             />
           ) : (
-            <PlaceholderPortrait label="portrait photo" />
+            <PlaceholderPortrait />
           )}
         </div>
 

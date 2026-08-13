@@ -226,6 +226,22 @@ a {
   animation: glow-pulse 6s ease-in-out infinite;
 }
 
+@keyframes bar-grow {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+.bar-grow {
+  transform-origin: bottom;
+  animation-name: bar-grow;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -243,5 +259,11 @@ a {
     transform: none !important;
     clip-path: none !important;
     opacity: 1 !important;
+  }
+
+  /* SVG <animateMotion>/<animate> (SMIL) ignore the animation-duration override above —
+     hide the traveling pulses directly so the pipeline graphic settles to its static state. */
+  .flow-pulse {
+    opacity: 0 !important;
   }
 }
