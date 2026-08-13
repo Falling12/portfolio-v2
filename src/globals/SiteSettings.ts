@@ -73,18 +73,14 @@ export const SiteSettings: GlobalConfig = {
     {
       name: 'email',
       type: 'email',
-      required: true,
-      admin: { description: 'Placeholder — flag for the real address before launch' },
     },
     {
       name: 'github',
       type: 'text',
-      admin: { description: 'Placeholder URL — flag for the real profile URL before launch' },
     },
     {
       name: 'linkedin',
       type: 'text',
-      admin: { description: 'Placeholder URL — flag for the real profile URL before launch' },
     },
     {
       name: 'accentColor',

@@ -10,9 +10,11 @@ export function Footer({ uiText, siteSettings }: { uiText: UiText; siteSettings:
           &copy; {year} {siteSettings.name}
         </div>
         <div className="flex items-center gap-8 text-sm font-medium tracking-wide">
-          <a href={`mailto:${siteSettings.email}`} className="text-muted transition-colors hover:text-ink">
-            {siteSettings.email}
-          </a>
+          {siteSettings.email && (
+            <a href={`mailto:${siteSettings.email}`} className="text-muted transition-colors hover:text-ink">
+              {siteSettings.email}
+            </a>
+          )}
           {siteSettings.github && (
             <a href={siteSettings.github} className="text-muted transition-colors hover:text-ink">
               {uiText.footer.github}

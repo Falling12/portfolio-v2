@@ -46,17 +46,19 @@ export function Contact({ uiText, siteSettings }: { uiText: UiText; siteSettings
             <p className="mb-12 max-w-md text-xl font-light text-muted">{siteSettings.contactDescription}</p>
           </div>
 
-          <div>
-            <span className="mb-2 block font-mono text-sm tracking-widest text-muted uppercase">
-              {uiText.contact.emailLabel}
-            </span>
-            <a
-              href={`mailto:${siteSettings.email}`}
-              className="inline-block border-b border-transparent pb-1 font-heading text-2xl transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] md:text-3xl"
-            >
-              {siteSettings.email}
-            </a>
-          </div>
+          {siteSettings.email && (
+            <div>
+              <span className="mb-2 block font-mono text-sm tracking-widest text-muted uppercase">
+                {uiText.contact.emailLabel}
+              </span>
+              <a
+                href={`mailto:${siteSettings.email}`}
+                className="inline-block border-b border-transparent pb-1 font-heading text-2xl transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] md:text-3xl"
+              >
+                {siteSettings.email}
+              </a>
+            </div>
+          )}
         </div>
 
         <div className="border border-rule bg-surface/30 p-6 md:p-12">

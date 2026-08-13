@@ -31,13 +31,13 @@ export default async function HomePage() {
     name: siteSettings.name,
     jobTitle: siteSettings.role,
     url: serverURL,
-    email: `mailto:${siteSettings.email}`,
     address: {
       '@type': 'PostalAddress',
       addressLocality: siteSettings.location,
     },
     description: aboutContent.bioParagraph1,
     knowsAbout: (capabilities.items || []).map((item) => item.title),
+    ...(siteSettings.email ? { email: `mailto:${siteSettings.email}` } : {}),
     ...(sameAs.length > 0 ? { sameAs } : {}),
   }
 

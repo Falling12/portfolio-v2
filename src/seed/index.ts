@@ -106,9 +106,8 @@ async function seedSiteSettings() {
       'I build websites, web applications and dashboards in Next.js and TypeScript — and AI systems, including agent-driven pipelines that write, test and ship real software.',
     contactDescription:
       'Tell me in a few sentences what you want built — a website, an internal system, something with AI in it. I reply within two working days, in Hungarian or English.',
-    email: 'hello@csanadsenk.dev',
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
+    github: 'https://github.com/Falling12',
+    linkedin: 'https://www.linkedin.com/in/csan%C3%A1d-senk-61a460341/',
     accentColor: 'blue' as const,
   }
 

@@ -460,17 +460,8 @@ export interface SiteSetting {
   availabilityValue: string;
   heroDescription: string;
   contactDescription: string;
-  /**
-   * Placeholder — flag for the real address before launch
-   */
-  email: string;
-  /**
-   * Placeholder URL — flag for the real profile URL before launch
-   */
+  email?: string | null;
   github?: string | null;
-  /**
-   * Placeholder URL — flag for the real profile URL before launch
-   */
   linkedin?: string | null;
   accentColor: 'blue' | 'green' | 'orange' | 'red';
   updatedAt?: string | null;
