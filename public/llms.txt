@@ -1,0 +1,60 @@
+# Csanád Senk — Full-stack developer
+
+> I build websites, web applications and dashboards in Next.js and TypeScript — and AI systems, including agent-driven pipelines that write, test and ship real software. Based in Debrecen, Hungary.
+
+## About
+
+- Full-stack developer in Debrecen, Hungary, currently at UPRIVE Design Studio.
+- Builds websites, web applications and dashboards — usually from the first conversation through to the thing running in production, with one person accountable end to end.
+- Over the last few years AI has moved to the centre of that work: not only building AI features into products, but building agent-driven pipelines that generate, test and ship real software.
+- Contact: hello@csanadsenk.dev
+
+## What I do
+
+- Websites — marketing sites that load fast, read well on a phone and turn visitors into enquiries.
+- Web applications — logins, payments, permissions, data: the software a business runs on day to day.
+- Dashboards — live numbers in one place, reports you can act on.
+- AI integration & automation (core specialism) — assistants, search and generation built into a product, and agent pipelines that write, test and ship code themselves.
+
+## Projects
+
+### Quponly — /work/quponly
+Digital loyalty and coupon platform — businesses issue Apple and Google Wallet passes in minutes, customers save them without installing an app, and staff redeem with a companion scanner app. Live at quponly.com.
+Tech: Next.js, Payload CMS, Stripe, Apple Wallet, Google Wallet
+
+### Getrive — /work/getrive
+B2B SaaS that watches Reddit and Hacker News for people describing the exact problem a product solves, scores each post with AI, and drafts an honest reply for human review before it ever goes out. Live at getrive.app.
+Tech: Next.js, Prisma, Stripe, AI SDK
+Core specialism: AI integration & automation
+
+### Leasetown — /work/leasetown
+Car leasing and subscription marketplace — live inventory, lease-term pricing, KYC-backed checkout and a protected customer dashboard for managing a subscription end to end. Live at leasetown.hu.
+Tech: Next.js, Payload CMS, better-auth, Playwright
+
+### Maturely — /work/maturely
+Weekly, plain-English security and business-logic audits for solo founders who shipped fast with an AI coding tool — scans the codebase, flags real risk in auth, payments and customer data, and hands back a fix-ready prompt.
+Tech: Next.js, Prisma, Vercel Sandbox, AI SDK
+Core specialism: AI integration & automation
+
+### Pricing Audit — /work/pricing-audit
+Audits a codebase for gaps between what a SaaS advertises in its pricing tiers and what's actually enforced in code, then proposes the missing checks and provisions the matching Stripe catalog.
+Tech: Next.js, Drizzle, Stripe, GitHub App
+Core specialism: AI integration & automation
+
+### Walkure RP — /work/walkure-rp
+Full commerce and community platform for an online roleplay server — Payload-driven shop and billing, Discord-gated accounts, role-based staff applications, and scheduled invoicing through Hungarian e-invoicing and OTP SimplePay. No longer running.
+Tech: Next.js, Payload CMS, MongoDB, SimplePay
+
+### Verita — /work/verita
+Delivered brand site for a software development and UX/UI consulting studio — a minimal, animated single-page presence built to make one impression well. Live at veritavc.com.
+Tech: Next.js, Strapi, WebGL
+
+### Fairdue — /work/fairdue
+Own product — split shared subscriptions and bills with friends and family, invite by link, and settle up without spreadsheet diplomacy. Not yet live.
+Tech: Next.js, Prisma, NextAuth, next-intl
+
+## Links
+
+- Homepage: /
+- All projects: /work
+- Contact: mailto:hello@csanadsenk.dev

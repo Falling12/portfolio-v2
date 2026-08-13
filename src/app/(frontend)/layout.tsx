@@ -1,11 +1,15 @@
 import React from 'react'
+import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk, Manrope, IBM_Plex_Mono } from 'next/font/google'
 import './styles.css'
 import { getLocale } from '@/lib/locale'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
 import { resolveAccent } from '@/lib/accent'
+import { getSiteSettings } from '@/lib/data'
 import { ScrollReveal } from '@/components/ScrollReveal'
+
+const serverURL = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin', 'latin-ext'],
@@ -28,9 +32,49 @@ const ibmPlexMono = IBM_Plex_Mono({
   display: 'swap',
 })
 
-export const metadata = {
-  title: 'Csanád Senk — Full-stack developer',
-  description: 'Full-stack developer in Debrecen, Hungary — websites, web applications, dashboards and AI systems.',
+export const viewport: Viewport = {
+  themeColor: '#141417',
+  colorScheme: 'dark',
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const siteSettings = await getSiteSettings(locale)
+  const title = `${siteSettings.name} — ${siteSettings.role}`
+  const description = siteSettings.heroDescription
+
+  return {
+    metadataBase: new URL(serverURL),
+    title: {
+      default: title,
+      template: `%s — ${siteSettings.name}`,
+    },
+    description,
+    keywords: [siteSettings.name, siteSettings.role, siteSettings.location, 'Next.js', 'TypeScript', 'AI integration'],
+    authors: [{ name: siteSettings.name, url: serverURL }],
+    creator: siteSettings.name,
+    publisher: siteSettings.name,
+    alternates: {
+      canonical: '/',
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title,
+      description,
+      url: '/',
+      siteName: siteSettings.name,
+      locale: locale === 'hu' ? 'hu_HU' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  }
 }
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
