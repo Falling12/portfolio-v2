@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: oklch(0.965 0.005 85); }
+  * { box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--accent); }
+  ::selection { background: oklch(0.55 0.17 255); color: #fff; }
+</style>
+</helmet>
+<div style="--accent: oklch(0.55 0.17 255); --ink: oklch(0.21 0.012 70); --muted: oklch(0.53 0.012 70); --rule: oklch(0.88 0.006 80); --paper: oklch(0.965 0.005 85); width: 1440px; margin: 0 auto; background: var(--paper); color: var(--ink); font-family: 'IBM Plex Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 40px; height: 78px; padding: 0 100px; background: color-mix(in oklab, oklch(0.965 0.005 85) 88%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--rule);">
+    <a href="#top" style="display: flex; align-items: baseline; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em;">
+      <span style="display: inline-block; width: 10px; height: 10px; background: var(--accent);"></span>
+      <span>Csanád Senk</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: 34px; font-size: 15px; letter-spacing: -0.005em; color: var(--muted);">
+      <a href="#work" data-hu="Munkáim" style="transition: color 0.2s;" style-hover="color: var(--ink)">Work</a>
+      <a href="#capabilities" data-hu="Amit csinálok" style="transition: color 0.2s;" style-hover="color: var(--ink)">What I do</a>
+      <a href="#about" data-hu="Rólam" style="transition: color 0.2s;" style-hover="color: var(--ink)">About</a>
+      <a href="#contact" data-hu="Kapcsolat" style="transition: color 0.2s;" style-hover="color: var(--ink)">Contact</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <div data-lang-toggle="" style="display: flex; align-items: center; border: 1px solid var(--rule); border-radius: 999px; padding: 3px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em;">
+        <button data-lang="en" style="border: 0; background: var(--ink); color: var(--paper); padding: 5px 11px; border-radius: 999px; font: inherit; cursor: pointer;">EN</button>
+        <button data-lang="hu" style="border: 0; background: transparent; color: var(--muted); padding: 5px 11px; border-radius: 999px; font: inherit; cursor: pointer;">HU</button>
+      </div>
+      <a href="#contact" data-hu="Beszéljünk" style="display: inline-flex; align-items: center; height: 40px; padding: 0 20px; background: var(--ink); color: var(--paper); border-radius: 999px; font-size: 14px; font-weight: 500; transition: background 0.2s;" style-hover="background: var(--accent); color: var(--paper)">Let's talk</a>
+    </div>
+  </header>
+
+  <section id="top" style="padding: 118px 100px 0;">
+    <div style="display: flex; align-items: center; gap: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);">
+      <span style="width: 7px; height: 7px; border-radius: 999px; background: var(--accent);"></span>
+      <span data-hu="Full-stack fejlesztő — Debrecen, Magyarország">Full-stack developer — Debrecen, Hungary</span>
+    </div>
+    <h1 style="margin: 26px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 132px; line-height: 0.9; letter-spacing: -0.045em; font-weight: 600;">Csanád<br />Senk</h1>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 80px; margin-top: 46px;">
+      <p data-hu="Weboldalakat, webalkalmazásokat és dashboardokat építek Next.js-ben és TypeScriptben — valamint AI-rendszereket és ügynök-vezérelt pipeline-okat, amelyek valódi, működő szoftvert írnak, tesztelnek és szállítanak." style="max-width: 620px; margin: 0; font-size: 23px; line-height: 1.5; letter-spacing: -0.012em; text-wrap: pretty; color: var(--ink);">I build websites, web applications and dashboards in Next.js and TypeScript — and AI systems, including agent-driven pipelines that write, test and ship real software.</p>
+      <div style="display: flex; align-items: center; gap: 16px; padding-bottom: 6px;">
+        <a href="#contact" data-hu="Beszéljünk a projektről" style="display: inline-flex; align-items: center; height: 54px; padding: 0 30px; background: var(--accent); color: #fff; border-radius: 999px; font-size: 16px; font-weight: 500; letter-spacing: -0.01em; transition: transform 0.2s;" style-hover="transform: translateY(-2px); color: #fff">Start a project</a>
+        <a href="#work" data-hu="Munkáim megtekintése" style="display: inline-flex; align-items: center; height: 54px; padding: 0 26px; border: 1px solid var(--rule); border-radius: 999px; font-size: 16px; letter-spacing: -0.01em; transition: border-color 0.2s;" style-hover="border-color: var(--ink)">See the work</a>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 84px; background: var(--rule); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+      <div style="background: var(--paper); padding: 20px 0;">
+        <div data-hu="Helyszín" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);">Location</div>
+        <div style="margin-top: 7px; font-size: 16px;">Debrecen, Hungary</div>
+      </div>
+      <div style="background: var(--paper); padding: 20px 0 20px 32px;">
+        <div data-hu="Jelenleg" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);">Currently</div>
+        <div data-hu="Full-stack fejlesztő, UPRIVE Design Studio" style="margin-top: 7px; font-size: 16px;">Full-stack developer, UPRIVE Design Studio</div>
+      </div>
+      <div style="background: var(--paper); padding: 20px 0 20px 32px;">
+        <div data-hu="Elérhetőség" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);">Availability</div>
+        <div data-hu="Vállalok új munkát" style="margin-top: 7px; font-size: 16px; color: var(--accent);">Taking on new work</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="padding: 110px 100px 0;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--rule); padding-bottom: 20px;">
+      <h2 data-hu="Munkáim" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 46px; letter-spacing: -0.035em; font-weight: 600;">Selected work</h2>
+      <span data-hu="Négy projekt" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);">Four projects</span>
+    </div>
+
+    <article style="display: grid; grid-template-columns: 700px 1fr; gap: 60px; align-items: center; padding: 60px 0; border-bottom: 1px solid var(--rule);">
+      <a href="#work" style="display: block; position: relative; height: 440px; background: oklch(0.93 0.006 85); border: 1px solid var(--rule); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; background: oklch(0.90 0.006 85); border-bottom: 1px solid var(--rule);">
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: oklch(0.78 0.008 80);"></span>
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: oklch(0.78 0.008 80);"></span>
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: oklch(0.78 0.008 80);"></span>
+        </div>
+        <div style="position: absolute; inset: 32px 0 0 0; background-image: repeating-linear-gradient(135deg, oklch(0.90 0.006 85) 0 9px, oklch(0.935 0.006 85) 9px 18px); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); background: var(--paper); padding: 8px 14px;">screenshot — landing page</span>
+        </div>
+      </a>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: var(--muted);">01</div>
+        <h3 style="margin: 14px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; letter-spacing: -0.03em; font-weight: 600;">Project 01</h3>
+        <p data-hu="Termékbevezetés landing oldala — gyors betöltés, tiszta szerkezet, keresőre optimalizálva." style="margin: 14px 0 0; font-size: 18px; line-height: 1.55; color: var(--muted); text-wrap: pretty;">A launch landing page built for speed, clarity and search — the kind of site that turns a visit into an enquiry.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">Next.js</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">TypeScript</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">Tailwind</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">Vercel</span>
+        </div>
+        <a href="#work" data-hu="Projekt megtekintése" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; font-size: 16px; font-weight: 500; border-bottom: 1px solid var(--ink); padding-bottom: 3px;" style-hover="border-color: var(--accent)">View project <span style="font-family: 'IBM Plex Mono', monospace;">→</span></a>
+      </div>
+    </article>
+
+    <article style="display: grid; grid-template-columns: 1fr 700px; gap: 60px; align-items: center; padding: 60px 0; border-bottom: 1px solid var(--rule);">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: var(--muted);">02</div>
+        <h3 style="margin: 14px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; letter-spacing: -0.03em; font-weight: 600;">Project 02</h3>
+        <p data-hu="Operatív dashboard: élő adatokból azonnal olvasható döntési helyzet, kézi riportok nélkül." style="margin: 14px 0 0; font-size: 18px; line-height: 1.55; color: var(--muted); text-wrap: pretty;">An operations dashboard that turns live data into decisions — no more assembling reports by hand each month.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">React</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">TypeScript</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">PostgreSQL</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">D3</span>
+        </div>
+        <a href="#work" data-hu="Projekt megtekintése" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; font-size: 16px; font-weight: 500; border-bottom: 1px solid var(--ink); padding-bottom: 3px;" style-hover="border-color: var(--accent)">View project <span style="font-family: 'IBM Plex Mono', monospace;">→</span></a>
+      </div>
+      <a href="#work" style="display: block; position: relative; height: 440px; background: oklch(0.93 0.006 85); border: 1px solid var(--rule); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; background: oklch(0.90 0.006 85); border-bottom: 1px solid var(--rule);">
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: oklch(0.78 0.008 80);"></span>
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: oklch(0.78 0.008 80);"></span>
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: oklch(0.78 0.008 80);"></span>
+        </div>
+        <div style="position: absolute; inset: 32px 0 0 0; background-image: repeating-linear-gradient(135deg, oklch(0.90 0.006 85) 0 9px, oklch(0.935 0.006 85) 9px 18px); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); background: var(--paper); padding: 8px 14px;">screenshot — dashboard</span>
+        </div>
+      </a>
+    </article>
+
+    <article style="display: grid; grid-template-columns: 700px 1fr; gap: 60px; align-items: center; padding: 60px 0; border-bottom: 1px solid var(--rule);">
+      <a href="#work" style="display: block; position: relative; height: 440px; background: oklch(0.93 0.006 85); border: 1px solid var(--rule); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; background: oklch(0.90 0.006 85); border-bottom: 1px solid var(--rule);">
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: oklch(0.78 0.008 80);"></span>
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: oklch(0.78 0.008 80);"></span>
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: oklch(0.78 0.008 80);"></span>
+        </div>
+        <div style="position: absolute; inset: 32px 0 0 0; background-image: repeating-linear-gradient(135deg, oklch(0.90 0.006 85) 0 9px, oklch(0.935 0.006 85) 9px 18px); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); background: var(--paper); padding: 8px 14px;">screenshot — web application</span>
+        </div>
+      </a>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: var(--muted);">03</div>
+        <h3 style="margin: 14px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; letter-spacing: -0.03em; font-weight: 600;">Project 03</h3>
+        <p data-hu="Több ügyfelet kiszolgáló webalkalmazás belépéssel, számlázással és jogosultságkezeléssel." style="margin: 14px 0 0; font-size: 18px; line-height: 1.55; color: var(--muted); text-wrap: pretty;">A multi-tenant web application with accounts, billing and role-based access — software a business actually runs on.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">Next.js</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">Prisma</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">Stripe</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">PostgreSQL</span>
+        </div>
+        <a href="#work" data-hu="Projekt megtekintése" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; font-size: 16px; font-weight: 500; border-bottom: 1px solid var(--ink); padding-bottom: 3px;" style-hover="border-color: var(--accent)">View project <span style="font-family: 'IBM Plex Mono', monospace;">→</span></a>
+      </div>
+    </article>
+
+    <article style="display: grid; grid-template-columns: 1fr 700px; gap: 60px; align-items: center; padding: 60px 0;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: var(--muted);">04</span>
+          <span data-hu="AI / automatizálás" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 3px 10px;">AI / automation</span>
+        </div>
+        <h3 style="margin: 14px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; letter-spacing: -0.03em; font-weight: 600;">Project 04</h3>
+        <p data-hu="Ügynök-vezérelt build pipeline: a rendszer maga írja, teszteli, átnézi és szállítja a kódot — egy fejlesztői felügyelettel." style="margin: 14px 0 0; font-size: 18px; line-height: 1.55; color: var(--muted); text-wrap: pretty;">An agent-driven build pipeline: models write the code, run the tests, review the diff and open the pull request — one developer supervising instead of a team typing.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">Claude API</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">TypeScript</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">GitHub Actions</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 6px 11px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);">Playwright</span>
+        </div>
+        <a href="#work" data-hu="Projekt megtekintése" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; font-size: 16px; font-weight: 500; border-bottom: 1px solid var(--ink); padding-bottom: 3px;" style-hover="border-color: var(--accent)">View project <span style="font-family: 'IBM Plex Mono', monospace;">→</span></a>
+      </div>
+      <a href="#work" style="display: block; position: relative; height: 440px; background: oklch(0.19 0.014 265); border: 1px solid oklch(0.19 0.014 265); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 10px; height: 32px; padding: 0 12px; background: oklch(0.25 0.014 265);">
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: oklch(0.42 0.02 265);"></span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: oklch(0.62 0.02 265);">agent-pipeline — run #248</span>
+        </div>
+        <div style="position: absolute; inset: 32px 0 0 0; background-image: repeating-linear-gradient(135deg, oklch(0.22 0.014 265) 0 9px, oklch(0.20 0.014 265) 9px 18px); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(0.72 0.02 265); background: oklch(0.19 0.014 265); padding: 8px 14px; border: 1px solid oklch(0.30 0.02 265);">screenshot — pipeline / terminal</span>
+        </div>
+      </a>
+    </article>
+  </section>
+
+  <section id="capabilities" style="margin-top: 40px; padding: 96px 100px 104px; background: oklch(0.19 0.014 265); color: oklch(0.95 0.004 265);">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid oklch(0.30 0.02 265); padding-bottom: 20px;">
+      <h2 data-hu="Amit csinálok" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 46px; letter-spacing: -0.035em; font-weight: 600;">What I do</h2>
+      <span data-hu="Tervezéstől a szállításig" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.65 0.02 265);">From plan to launch</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 1px; background: oklch(0.30 0.02 265);">
+      <div style="background: oklch(0.19 0.014 265); padding: 44px 44px 44px 0;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: oklch(0.62 0.02 265);">01</div>
+        <h3 data-hu="Weboldalak" style="margin: 16px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 30px; letter-spacing: -0.025em; font-weight: 600;">Websites</h3>
+        <p data-hu="Gyorsan betöltő, mobilon is jól olvasható oldalak, amelyek megkeresést hoznak. Úgy építem meg, hogy a tartalmat utána Ön is tudja szerkeszteni — ne kelljen minden apró módosításért fejlesztőt hívni." style="margin: 14px 0 0; font-size: 17px; line-height: 1.6; color: oklch(0.78 0.012 265); text-wrap: pretty;">Marketing sites that load fast, read well on a phone and turn visitors into enquiries. Built so you can edit the content yourself, without calling a developer for every change.</p>
+      </div>
+      <div style="background: oklch(0.19 0.014 265); padding: 44px 0 44px 44px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: oklch(0.62 0.02 265);">02</div>
+        <h3 data-hu="Webalkalmazások" style="margin: 16px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 30px; letter-spacing: -0.025em; font-weight: 600;">Web applications</h3>
+        <p data-hu="Belépés, fizetés, jogosultságok, adatbázis — az a szoftver, amin a cég napi működése fut. Úgy tervezem, hogy a növekedést is elbírja." style="margin: 14px 0 0; font-size: 17px; line-height: 1.6; color: oklch(0.78 0.012 265); text-wrap: pretty;">Logins, payments, permissions, data. The software your business runs on day to day, designed to hold up as the business grows.</p>
+      </div>
+      <div style="background: oklch(0.19 0.014 265); padding: 44px 44px 44px 0; border-top: 1px solid oklch(0.30 0.02 265);">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: oklch(0.62 0.02 265);">03</div>
+        <h3 data-hu="Dashboardok" style="margin: 16px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 30px; letter-spacing: -0.025em; font-weight: 600;">Dashboards</h3>
+        <p data-hu="A számai egy helyen, élőben. Olyan riportok, amelyekre lehet lépni — nem táblázatok, amiket minden hónap végén kézzel kell összerakni." style="margin: 14px 0 0; font-size: 17px; line-height: 1.6; color: oklch(0.78 0.012 265); text-wrap: pretty;">Your numbers in one place, live. Reports you can act on, instead of spreadsheets someone stitches together at the end of every month.</p>
+      </div>
+      <div style="background: oklch(0.22 0.03 265); padding: 44px; margin: 0 -44px -44px 0; border-top: 1px solid oklch(0.30 0.02 265); border-left: 2px solid var(--accent);">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: oklch(0.62 0.02 265);">04</span>
+          <span data-hu="Kiemelt szakterület" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);">Core specialism</span>
+        </div>
+        <h3 data-hu="AI-integráció és automatizálás" style="margin: 16px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 30px; letter-spacing: -0.025em; font-weight: 600;">AI integration &amp; automation</h3>
+        <p data-hu="Asszisztensek, keresés és tartalomgenerálás közvetlenül a termékébe építve — és ügynök-vezérelt pipeline-ok, amelyek maguk írják, tesztelik és szállítják a kódot. Ami korábban egy hét volt, egy délután lesz." style="margin: 14px 0 0; font-size: 17px; line-height: 1.6; color: oklch(0.84 0.012 265); text-wrap: pretty;">Assistants, search and generation built into your product — and agent pipelines that write, test and ship code themselves. Work that used to take a week takes an afternoon.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="padding: 110px 100px 0;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--rule); padding-bottom: 20px;">
+      <h2 data-hu="Rólam" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 46px; letter-spacing: -0.035em; font-weight: 600;">About</h2>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);">Debrecen, HU</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 420px 1fr; gap: 80px; padding: 60px 0 0;">
+      <div style="position: relative; height: 520px; background-image: repeating-linear-gradient(135deg, oklch(0.90 0.006 85) 0 9px, oklch(0.935 0.006 85) 9px 18px); border: 1px solid var(--rule); display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); background: var(--paper); padding: 8px 14px;">portrait photo</span>
+      </div>
+      <div>
+        <p data-hu="Full-stack fejlesztő vagyok Debrecenben, jelenleg az UPRIVE Design Studiónál. Weboldalakat, webalkalmazásokat és dashboardokat építek — általában a beszélgetéstől a kész, élő rendszerig. Szeretem, ha egy projektnek egy gazdája van, aki a tervezéstől a szállításig végigviszi." style="margin: 0; font-size: 19px; line-height: 1.6; letter-spacing: -0.01em; text-wrap: pretty;">I'm a full-stack developer in Debrecen, currently at UPRIVE Design Studio. I build websites, web applications and dashboards — usually from the first conversation through to the thing running in production. I like projects with one person accountable end to end.</p>
+        <p data-hu="Az elmúlt években az AI került a munkám közepébe: nem csak AI-funkciókat építek termékekbe, hanem olyan ügynök-vezérelt pipeline-okat is, amelyek maguk generálnak, tesztelnek és szállítanak valódi szoftvert. Ez azt jelenti, hogy kisebb csapattal, gyorsabban lehet komoly rendszert kiadni — és ez ma a legerősebb dolog, amit egy ügyfélnek hozni tudok." style="margin: 22px 0 0; font-size: 19px; line-height: 1.6; letter-spacing: -0.01em; text-wrap: pretty;">Over the last few years AI has moved to the centre of that work — not only building AI features into products, but building agent-driven pipelines that generate, test and ship real software. In practice it means a smaller team gets a serious system out faster, and it's the strongest thing I bring to a project.</p>
+        <div data-hu="Technológiák" style="margin-top: 46px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); padding-bottom: 14px;">Stack</div>
+        <div style="display: grid; grid-template-columns: 150px 1fr; gap: 0 32px; margin-top: 0;">
+          <div style="padding: 18px 0; border-bottom: 1px solid var(--rule); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted);">Core</div>
+          <div style="padding: 18px 0; border-bottom: 1px solid var(--rule); font-size: 16px;">TypeScript · React · Next.js · Node</div>
+          <div style="padding: 18px 0; border-bottom: 1px solid var(--rule); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--accent);">AI</div>
+          <div style="padding: 18px 0; border-bottom: 1px solid var(--rule); font-size: 16px;">Claude API · OpenAI API · agent orchestration · RAG · evals · MCP</div>
+          <div style="padding: 18px 0; border-bottom: 1px solid var(--rule); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted);">Interface</div>
+          <div style="padding: 18px 0; border-bottom: 1px solid var(--rule); font-size: 16px;">Tailwind · CSS · Framer Motion · Figma</div>
+          <div style="padding: 18px 0; border-bottom: 1px solid var(--rule); font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted);">Data</div>
+          <div style="padding: 18px 0; border-bottom: 1px solid var(--rule); font-size: 16px;">PostgreSQL · Prisma · Supabase · Redis</div>
+          <div style="padding: 18px 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted);">Infra</div>
+          <div style="padding: 18px 0; font-size: 16px;">Vercel · Docker · GitHub Actions · Playwright</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="margin-top: 110px; padding: 96px 100px 100px; border-top: 1px solid var(--rule); background: oklch(0.945 0.006 85);">
+    <div style="display: grid; grid-template-columns: 1fr 620px; gap: 100px;">
+      <div>
+        <h2 data-hu="Kapcsolat" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 64px; line-height: 1; letter-spacing: -0.04em; font-weight: 600;">Let's talk</h2>
+        <p data-hu="Írja le pár mondatban, mit szeretne megépíteni — weboldalt, belső rendszert vagy AI-megoldást. Két munkanapon belül válaszolok, magyarul vagy angolul." style="margin: 24px 0 0; max-width: 460px; font-size: 19px; line-height: 1.6; color: var(--muted); text-wrap: pretty;">Tell me in a few sentences what you want built — a website, an internal system, something with AI in it. I reply within two working days, in Hungarian or English.</p>
+        <div style="margin-top: 44px;">
+          <div data-hu="Vagy írjon közvetlenül" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);">Or email directly</div>
+          <a href="mailto:hello@csanadsenk.dev" style="display: inline-block; margin-top: 10px; font-family: 'Space Grotesk', sans-serif; font-size: 28px; letter-spacing: -0.025em; border-bottom: 1px solid var(--rule); padding-bottom: 4px;" style-hover="border-color: var(--accent)">hello@csanadsenk.dev</a>
+        </div>
+      </div>
+      <form onSubmit="{{ onSubmit }}" style="display: flex; flex-direction: column; gap: 26px;">
+        <label style="display: flex; flex-direction: column; gap: 10px;">
+          <span data-hu="Név" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);">Name</span>
+          <input type="text" data-hu-placeholder="Az Ön neve" placeholder="Your name" style="height: 52px; padding: 0 16px; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; color: var(--ink); outline: none;" style-focus="border-color: var(--accent)" />
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 10px;">
+          <span data-hu="E-mail" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);">Email</span>
+          <input type="email" placeholder="you@company.com" style="height: 52px; padding: 0 16px; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; color: var(--ink); outline: none;" style-focus="border-color: var(--accent)" />
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 10px;">
+          <span data-hu="Üzenet" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);">Message</span>
+          <textarea rows="6" data-hu-placeholder="Mit szeretne megépíteni?" placeholder="What are you looking to build?" style="padding: 14px 16px; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; line-height: 1.5; color: var(--ink); outline: none; resize: vertical;" style-focus="border-color: var(--accent)"></textarea>
+        </label>
+        <button type="submit" data-hu="Üzenet küldése" style="align-self: flex-start; height: 54px; padding: 0 32px; background: var(--ink); color: var(--paper); border: 0; border-radius: 999px; font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; font-weight: 500; cursor: pointer; transition: background 0.2s;" style-hover="background: var(--accent)">Send message</button>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--accent); min-height: 16px;">{{ sentNote }}</span>
+      </form>
+    </div>
+  </section>
+
+  <footer style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 34px 100px; border-top: 1px solid var(--rule); font-size: 15px; color: var(--muted);">
+    <span>© 2026 Csanád Senk</span>
+    <div style="display: flex; align-items: center; gap: 28px;">
+      <a href="mailto:hello@csanadsenk.dev">hello@csanadsenk.dev</a>
+      <a href="https://github.com">GitHub</a>
+      <a href="https://linkedin.com">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;oklch(0.55 0.17 255)&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;oklch(0.55 0.17 255)&quot;,&quot;oklch(0.58 0.16 145)&quot;,&quot;oklch(0.62 0.17 45)&quot;,&quot;oklch(0.52 0.18 20)&quot;],&quot;section&quot;:&quot;Theme&quot;},&quot;defaultLang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;EN&quot;,&quot;HU&quot;],&quot;default&quot;:&quot;EN&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { sentNote: "" };
+
+  componentDidMount() {
+    const root = this.rootEl || document.querySelector('[data-lang-toggle]')?.closest('div[style*="--accent"]');
+    if (this.props.accent && root) root.style.setProperty('--accent', this.props.accent);
+    this.bindLang();
+    if ((this.props.defaultLang || 'EN') === 'HU') this.setLang('hu');
+  }
+
+  componentDidUpdate() { this.bindLang(); }
+
+  bindLang() {
+    const bar = document.querySelector('[data-lang-toggle]');
+    if (!bar || bar.dataset.bound) return;
+    bar.dataset.bound = '1';
+    bar.querySelectorAll('button[data-lang]').forEach((b) => {
+      b.addEventListener('click', () => this.setLang(b.dataset.lang));
+    });
+  }
+
+  setLang(lang) {
+    const scope = document.querySelector('[data-lang-toggle]')?.closest('div');
+    const doc = document;
+    doc.querySelectorAll('[data-hu]').forEach((el) => {
+      if (!el.dataset.en) el.dataset.en = el.textContent;
+      el.textContent = lang === 'hu' ? el.dataset.hu : el.dataset.en;
+    });
+    doc.querySelectorAll('[data-hu-placeholder]').forEach((el) => {
+      if (!el.dataset.enPlaceholder) el.dataset.enPlaceholder = el.placeholder;
+      el.placeholder = lang === 'hu' ? el.dataset.huPlaceholder : el.dataset.enPlaceholder;
+    });
+    doc.querySelectorAll('[data-lang-toggle] button[data-lang]').forEach((b) => {
+      const on = b.dataset.lang === lang;
+      b.style.background = on ? 'var(--ink)' : 'transparent';
+      b.style.color = on ? 'var(--paper)' : 'var(--muted)';
+    });
+    this.lang = lang;
+  }
+
+  renderVals() {
+    return {
+      sentNote: this.state.sentNote,
+      onSubmit: (e) => {
+        e.preventDefault();
+        this.setState({ sentNote: this.lang === 'hu' ? 'Köszönöm — hamarosan válaszolok.' : 'Thanks — I\u2019ll reply shortly.' });
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
