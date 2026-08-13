@@ -161,27 +161,37 @@ async function seedAboutContent() {
 }
 
 async function seedCapabilities() {
+  // Stable ids shared across both locale updates below. `items` holds a
+  // localized title/body per array row — without a matching id, each
+  // locale-scoped updateGlobal call creates its own fresh set of rows
+  // instead of writing to the same one, leaving the other locale empty.
+  const CAP_IDS = ['websites', 'web-applications', 'dashboards', 'ai-integration']
+
   const en = {
     items: [
       {
+        id: CAP_IDS[0],
         index: '01',
         title: 'Websites',
         body: 'Marketing sites that load fast, read well on a phone and turn visitors into enquiries. Built so you can edit the content yourself, without calling a developer for every change.',
         isCoreSpecialism: false,
       },
       {
+        id: CAP_IDS[1],
         index: '02',
         title: 'Web applications',
         body: 'Logins, payments, permissions, data. The software your business runs on day to day, designed to hold up as the business grows.',
         isCoreSpecialism: false,
       },
       {
+        id: CAP_IDS[2],
         index: '03',
         title: 'Dashboards',
         body: 'Your numbers in one place, live. Reports you can act on, instead of spreadsheets someone stitches together at the end of every month.',
         isCoreSpecialism: false,
       },
       {
+        id: CAP_IDS[3],
         index: '04',
         title: 'AI integration & automation',
         body: 'Assistants, search and generation built into your product — and agent pipelines that write, test and ship code themselves. Work that used to take a week takes an afternoon.',
@@ -193,24 +203,28 @@ async function seedCapabilities() {
   const hu = {
     items: [
       {
+        id: CAP_IDS[0],
         index: '01',
         title: 'Weboldalak',
         body: 'Gyorsan betöltő, mobilon is jól olvasható oldalak, amelyek megkeresést hoznak. Úgy építem meg, hogy a tartalmat utána Ön is tudja szerkeszteni — ne kelljen minden apró módosításért fejlesztőt hívni.',
         isCoreSpecialism: false,
       },
       {
+        id: CAP_IDS[1],
         index: '02',
         title: 'Webalkalmazások',
         body: 'Belépés, fizetés, jogosultságok, adatbázis — az a szoftver, amin a cég napi működése fut. Úgy tervezem, hogy a növekedést is elbírja.',
         isCoreSpecialism: false,
       },
       {
+        id: CAP_IDS[2],
         index: '03',
         title: 'Dashboardok',
         body: 'A számai egy helyen, élőben. Olyan riportok, amelyekre lehet lépni — nem táblázatok, amiket minden hónap végén kézzel kell összerakni.',
         isCoreSpecialism: false,
       },
       {
+        id: CAP_IDS[3],
         index: '04',
         title: 'AI-integráció és automatizálás',
         body: 'Asszisztensek, keresés és tartalomgenerálás közvetlenül a termékébe építve — és ügynök-vezérelt pipeline-ok, amelyek maguk írják, tesztelik és szállítják a kódot. Ami korábban egy hét volt, egy délután lesz.',
@@ -219,6 +233,9 @@ async function seedCapabilities() {
     ],
   }
 
+  // Writing a full 4-item array replaces the whole set (minRows/maxRows is 4, so it
+  // can't be cleared first) — any stale rows from a prior broken seed run, whose ids
+  // aren't in CAP_IDS, are dropped automatically by this update.
   await payload.updateGlobal({ slug: 'capabilities', locale: 'en', data: en })
   await payload.updateGlobal({ slug: 'capabilities', locale: 'hu', data: hu })
   console.log('Seeded capabilities')
